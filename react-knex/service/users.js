@@ -10,6 +10,13 @@ class UsersService {
       return data;
     }
 
+    async getUsers() {
+      const data = await db('users')
+      .select('*');
+
+      return data;
+    }
+
     async createUsers(first_name, last_name, email, password) {
       const [id] = await db('users')
       .insert({

@@ -6,9 +6,10 @@ const router = express.Router();
 
 // Users
 router.get('/users/:id', UsersController.selectUsers);
+router.get('/users', UsersController.getUsers);
 router.post('/users', UsersController.createUsers);
 router.put('/users/:id', UsersController.updateUsers);
-router.delete('/users', UsersController.deleteUsers);
+//router.delete('/users/:id', UsersController.deleteUsers);
 
 // Products
 router.get('/products/:id', ProductsController.selectProducts);
